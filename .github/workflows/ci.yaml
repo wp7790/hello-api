@@ -1,0 +1,14 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    uses: wp7790/core-pipeline/.github/workflows/build-and-push.yaml@main
+    with:
+      image_name: docker.io/wp7790/hello-api
+      dockerfile_path: ./Dockerfile
+      context_path: ./
