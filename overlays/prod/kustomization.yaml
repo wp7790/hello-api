@@ -1,0 +1,11 @@
+
+
+namespace: prod
+
+resources: 
+- ../../base
+- ../../../infra/base     
+
+images:
+  - name: yonas2323/hello-api
+    newTag: latest    
