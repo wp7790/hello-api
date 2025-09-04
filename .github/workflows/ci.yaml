@@ -12,7 +12,7 @@ jobs:
       app: hello-api
       context: ./app
       dockerfile: ./app/Dockerfile
-      image_name: wp7790/hello-api
+      image_name: yonas2323/hello-api
       push_tag: latest
     secrets:
       DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
