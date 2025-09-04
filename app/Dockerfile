@@ -6,7 +6,7 @@ WORKDIR /app
 
 # Copy package files and install dependecies 
 COPY package.json ./
-RUN npm install --prefix package
+RUN npm install 
 
 # copy index/ ./index/ 
 
