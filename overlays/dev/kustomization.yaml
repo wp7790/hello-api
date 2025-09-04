@@ -3,8 +3,4 @@ namespace: dev
 
 resources: 
 - ../../base
-- ../../../infra/base     
-
-images:
-  - name: /hello-api
-    newTag: latest    
+    
