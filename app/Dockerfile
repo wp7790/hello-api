@@ -1,9 +1,18 @@
-# Build a tiny Node image
-FROM node:20-alpine
+# use official Node.ms LTS image 
+FROM node:18 
+
+#set working Directory 
 WORKDIR /app
-COPY package.json package-lock.json* ./
-RUN npm ci --only=production || npm install --only=production
-COPY . .
-ENV PORT=8080
-EXPOSE 8080
-CMD ["npm", "start"]
+
+# Copy package files and install dependecies 
+COPY package.json ./package/
+RUN npm install --prefix package
+
+# copy index/ ./index/ 
+
+COPY index/ ./index/
+
+#set envireonment varialbe for node 
+ENV NODE_ENV=production
+EXPOSE 3000
+CMD ["node", "index/main.js"]
