@@ -10,6 +10,8 @@ jobs:
     uses: wp7790/core-pipeline/.github/workflows/build-and-push-docker.yml@main
     with:
       app: hello-api
+      context: ./app
+      dockerfile: ./app/Dockerfile
       image_name: wp7790/hello-api
       push_tag: latest
     secrets:
